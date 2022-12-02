@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let contents = fs::read_to_string("input.txt").expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("inputs/1.txt").expect("Something went wrong reading the file");
     let mut iter = contents.lines();
 
     let mut top_3 = vec![0,0,0];
@@ -21,9 +21,9 @@ fn main() {
             curr = 0;
         }
     }
-    print!("{:?}", top_3);
+    println!("{:?}", top_3);
     let sum = top_3.iter().sum::<i32>();
-    print!("{:?}", sum);
+    println!("{:?}", sum);
 }
 
 
